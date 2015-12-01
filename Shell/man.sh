@@ -1,0 +1,70 @@
+function cpman {
+  sudo cp -a /usr/share/man/man$1/$2.$1 ~/Documents/Manpages
+}
+
+function cpmang {
+  sudo cp -a /usr/share/man/man$1/$2.$1.gz ~/Documents/Manpages
+}
+
+function cpmanx {
+  sudo cp -a /usr/share/man/man$1/$2.$1.xz ~/Documents/Manpages
+}
+
+function cpmanb {
+  sudo cp -a /usr/share/man/man$1/$2.$1.bz2 ~/Documents/Manpages
+}
+
+function manconv {
+  pushd $HOME/Documents/Manpages
+  gzip -c $2.$1 > $2.$1.gz
+  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
+  sudo chmod 777 -R *
+  rm $2.$1.gz $2.$1
+  popd
+}
+
+function manconvb {
+  pushd $HOME/Documents/Manpages
+  sudo chmod 777 -R $2.$1.bz2
+  bzip2 -d $2.$1.bz2
+  gzip -c $2.$1 > $2.$1.gz
+  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
+  sudo chmod 777 -R *
+  rm $2.$1.gz $2.$1
+  popd
+}
+
+function manconvg {
+  pushd $HOME/Documents/Manpages
+  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
+  sudo chmod 777 -R *
+  rm $2.$1.gz
+  popd
+}
+
+function manconvx {
+  pushd $HOME/Documents/Manpages
+  sudo chmod 777 -R $2.$1.xz
+  unxz $2.$1.xz
+  gzip -c $2.$1 > $2.$1.gz
+  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
+  sudo chmod 777 -R *
+  rm -rf $2.$1.gz $2.$1 $2.$1.xz
+  popd
+}
+
+function manhtml {
+  cpman $1 $2 && manconv $1 $2 && cp -a $HOME/Documents/Manpages/$2.$1.html $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+}
+
+function manhtmlb {
+  cpmanb $1 $2 && manconvb $1 $2 && cp -a $HOME/Documents/Manpages/$2.$1.html $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+}
+
+function manhtmlg {
+  cpmang $1 $2 && manconvg $1 $2 && cp -a $HOME/Documents/Manpages/$2.$1.html $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+}
+
+function manhtmlx {
+  cpmanx $1 $2 && manconvx $1 $2 && cp -a $HOME/Documents/Manpages/$2.$1.html $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+}
