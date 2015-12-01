@@ -25,8 +25,7 @@ function push {
 
 # Push GitHub pages changes
 function pushp {
-  git add --all && git commit -m "$1" && git push -u origin
-master
+  git add --all && git commit -m "$1" && git push -u origin master
 }
 
 # Estimate the size of the current repo
@@ -50,8 +49,8 @@ function pushss {
 # sabayon-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -a ~/Shell/* ~/GitHub/mageia-scripts/Shell
-    cp -a ~/.bashrc ~/GitHub/mageia-scripts/
+    cp -af ~/Shell/* ~/GitHub/mageia-scripts/Shell
+    cp -af ~/.bashrc ~/GitHub/mageia-scripts/
   }
 
   function cdss {
