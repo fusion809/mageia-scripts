@@ -1,4 +1,3 @@
-export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/fusion809/.oh-my-zsh
 
@@ -53,10 +52,6 @@ ZSH_THEME="hcompact"
 plugins=(git safe-paste zsh-completions)
 autoload -U compinit && compinit
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
-# bind UP and DOWN arrow keys
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
 #
 # # bind UP and DOWN arrow keys (compatibility fallback
 # # for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
