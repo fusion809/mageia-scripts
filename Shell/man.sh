@@ -1,17 +1,17 @@
 function cpman {
-  sudo cp -a /usr/share/man/man$1/$2.$1 ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1 $HOME/Documents/Manpages
 }
 
 function cpmang {
-  sudo cp -a /usr/share/man/man$1/$2.$1.gz ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1.gz $HOME/Documents/Manpages
 }
 
 function cpmanx {
-  sudo cp -a /usr/share/man/man$1/$2.$1.xz ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1.xz $HOME/Documents/Manpages
 }
 
 function cpmanb {
-  sudo cp -a /usr/share/man/man$1/$2.$1.bz2 ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1.bz2 $HOME/Documents/Manpages
 }
 
 function manconv {

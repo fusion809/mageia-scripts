@@ -1,9 +1,9 @@
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdman {
-	cd ~/Documents/Manpages
+	cd $HOME/Documents/Manpages
 }
 
 function cdg {

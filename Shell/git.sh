@@ -49,12 +49,12 @@ function pushss {
 # sabayon-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -af ~/Shell/* ~/GitHub/mageia-scripts/Shell
-    cp -af ~/.bashrc ~/GitHub/mageia-scripts/
+    cp -af $HOME/Shell/* $HOME/GitHub/mageia-scripts/Shell
+    cp -af $HOME/.bashrc $HOME/GitHub/mageia-scripts/
   }
 
   function cdss {
-	cd ~/GitHub/mageia-scripts
+	cd $HOME/GitHub/mageia-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
