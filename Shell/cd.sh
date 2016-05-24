@@ -10,6 +10,10 @@ function cdg {
 	cd $HOME/GitHub
 }
 
+function cdgm {
+	cd $HOME/GitHub/mine
+}
+
 function cdfgi {
 	cd $HOME/GitHub/fusion809.github.io
 }
