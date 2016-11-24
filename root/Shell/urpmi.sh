@@ -3,5 +3,5 @@ function urpmil {
 }
 
 function update {
-	urpmi.update -a && sudo urpmi --auto-select
+	urpmi.update -a && urpmi --auto-select
 }
