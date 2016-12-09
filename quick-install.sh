@@ -12,20 +12,17 @@ if ! [[ -f /bin/zsh ]]; then
   sudo urpmi zsh
 fi
 
+if ! [[ -f /usr/bin/git ]]; then
+  sudo urpmi git
+fi
+
 # Clone mageia-scripts repo
-if ! [[ -d $HOME/GitHub/mageia-scripts ]] || ! [[ -d $HOME/GitHub/mine/mageia-scripts ]]; then
+if ! [[ -d $HOME/GitHub/mine/mageia-scripts ]]; then
   git clone https://github.com/fusion809/mageia-scripts $HOME/GitHub/mine/mageia-scripts
   # Copy across
   cp -a $HOME/GitHub/mine/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
   sudo cp -a $HOME/GitHub/mine/mageia-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mageia-scripts ]]; then
-  cd $HOME/GitHub/mageia-scripts
-  git pull origin master
-  cd -
-  # Copy across
-  cp -a $HOME/GitHub/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mageia-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/mageia-scripts ]]; then
+else
   cd $HOME/GitHub/mine/mageia-scripts
   git pull origin master
   cd -
@@ -43,15 +40,15 @@ else
   cd -
 fi
 
-if ! [[ -d $HOME/GitHub/zsh-theme ]] || ! [[ -d $HOME/GitHub/mine/zsh-theme ]]; then
+if ! [[ -d $HOME/GitHub/mine/zsh-theme ]]; then
 # Get my self-made zsh-themes
   git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/zsh-theme
   cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 else
-  cd $HOME/GitHub/{,mine/}zsh-theme
+  cd $HOME/GitHub/mine/zsh-theme
   git pull origin master
   cd -
-  cp -a $HOME/GitHub/{,mine/}zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
