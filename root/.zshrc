@@ -92,5 +92,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 for i in $HOME/Shell/*.sh
 do
-  . "$i"
+    . "$i"
 done
