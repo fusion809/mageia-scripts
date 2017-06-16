@@ -1,19 +1,27 @@
 function cdsh {
-	cd $HOME/Shell
+    cd $HOME/Shell
 }
 
 function cdman {
-	cd $HOME/Documents/Manpages
+    cd $HOME/Documents/Manpages
 }
 
 function cdg {
-	cd $HOME/GitHub
+    cd $HOME/GitHub
 }
 
 function cdgm {
-	cd $HOME/GitHub/mine
+    cd $HOME/GitHub/mine
+}
+
+function cdsc {
+    cdgm "scripts/$1"
+}
+
+function cdweb {
+    cdgm "websites/$1"
 }
 
 function cdfgi {
-	cd $HOME/GitHub/fusion809.github.io
+    cdweb "fusion809.github.io/$1"
 }
