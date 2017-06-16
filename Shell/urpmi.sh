@@ -1,7 +1,11 @@
+function sui {
+    sudo urpmi "$@"
+}
+
 function urpmil {
-  rpm -ql urpmi | grep /usr/share/man
+    rpm -ql urpmi | grep /usr/share/man
 }
 
 function update {
-	sudo urpmi.update -a && sudo urpmi --auto-select
+    sudo urpmi.update -a && sudo urpmi --auto-select
 }
