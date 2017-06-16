@@ -26,7 +26,7 @@ if ! [[ -d $HOME/GitHub/mine/scripts/mageia-scripts ]]; then
 else
     pushd $HOME/GitHub/mine/scripts/mageia-scripts
     git pull origin master
-    popd -
+    popd
 
     # Copy across
     cp -a $HOME/GitHub/mine/scripts/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
@@ -39,7 +39,7 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
 else
     pushd $HOME/.oh-my-zsh
     git pull origin master
-    popd -
+    popd
 fi
 
 if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
@@ -49,7 +49,7 @@ if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
 else
     pushd $HOME/GitHub/mine/scripts/zsh-theme
     git pull origin master
-    popd -
+    popd
     cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 fi
 
