@@ -54,7 +54,7 @@ function cps {
 }
 
 function cdms {
-    cd $HOME/GitHub/mine/scripts/mageia-scripts
+    cdsc "mageia-scripts/$1"
 }
 
 ## Update mageia-scripts GitHub repo
