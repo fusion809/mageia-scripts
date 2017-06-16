@@ -19,7 +19,7 @@ function cdsc {
 }
 
 function cdms {
-    cd "$HOME/GitHub/mine/scripts/mageia-scripts/$1"
+    cdsc "mageia-scripts/$1"
 }
 
 function cdweb {

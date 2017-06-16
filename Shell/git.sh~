@@ -53,6 +53,10 @@ function cps {
     cp -af $HOME/.bashrc $HOME/GitHub/mine/scripts/mageia-scripts/
 }
 
+function cdms {
+    cdsc "mageia-scripts/$1"
+}
+
 ## Update mageia-scripts GitHub repo
 function shup {
     cps && cdms && push "$1"
