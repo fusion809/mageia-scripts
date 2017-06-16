@@ -1,7 +1,11 @@
 function nbash {
-	nano $HOME/.bashrc
+    nano $HOME/.bashrc
 }
 
 function sbash {
-	source $HOME/.bashrc
+    source $HOME/.bashrc
+}
+
+function vbash {
+    vim $HOME/.bashrc
 }
