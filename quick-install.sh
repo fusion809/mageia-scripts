@@ -45,12 +45,14 @@ fi
 if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
 # Get my self-made zsh-themes
     git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/scripts/zsh-theme
-    cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+    cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 else
     pushd $HOME/GitHub/mine/scripts/zsh-theme
     git pull origin master
     popd
-    cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+A
+A
+    cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
