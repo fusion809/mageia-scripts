@@ -41,3 +41,7 @@ function cdfgi {
 function cdvi {
     cd "$HOME/VirtualBox VMs/ISOs/$1"
 }
+
+function cdp {
+    cd "$HOME/Programs/$1"
+}
