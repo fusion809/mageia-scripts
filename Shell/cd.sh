@@ -1,5 +1,5 @@
 function cdsh {
-    cd $HOME/Shell
+    cd $HOME/Shell/$1
 }
 
 function cdman {
@@ -7,11 +7,19 @@ function cdman {
 }
 
 function cdg {
-    cd $HOME/GitHub
+    cd $HOME/GitHub/$1
 }
 
 function cdgm {
-    cd $HOME/GitHub/mine
+    cd $HOME/GitHub/mine/$1
+}
+
+function cded {
+    cdgm "editors/$1"
+}
+
+function cdvm {
+    cded "vim/$1"
 }
 
 function cdsc {
@@ -28,4 +36,8 @@ function cdweb {
 
 function cdfgi {
     cdweb "fusion809.github.io/$1"
+}
+
+function cdvi {
+    cd "$HOME/VirtualBox VMs/ISOs/$1"
 }
