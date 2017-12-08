@@ -9,3 +9,7 @@ function urpmil {
 function update {
     sudo urpmi.update -a && sudo urpmi --auto-select
 }
+
+function sus {
+    sudo urpmq -Y "$@"
+}
