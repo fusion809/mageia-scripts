@@ -10,9 +10,17 @@ function sds {
     sudo dnf search "$@"
 }
 
-function update {
+function sduy {
     sudo dnf update -y
+}
+
+
+function update {
+    sduy
+    # Flatpak
     if `which flatpak > /dev/null 2>&1`; then
          flatpak update
     fi
+    # Nix
+    nixup
 }
