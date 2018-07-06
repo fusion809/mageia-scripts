@@ -11,12 +11,19 @@ function sds {
 }
 
 function sduy {
-    sudo dnf update -y
+    sudo dnf update -y "$@"
 }
 
+alias duy=sduy
+
+function sduyr {
+    sduy --refresh
+}
+
+alias duyr=sduyr
 
 function update {
-    sduy
+    sduyr
     # Flatpak
     if `which flatpak > /dev/null 2>&1`; then
          flatpak update
