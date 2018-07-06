@@ -9,6 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+export PS1='[\u@\h \w]\\$ '
 
 for i in $HOME/Shell/*.sh
 do
