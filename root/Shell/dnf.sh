@@ -14,3 +14,8 @@ function update {
     duyr
     su - fusion809 -c "flatpak update ; nix-channel --update ; nix-env --upgrade"
 }
+
+function ds {
+    dnf search "$@"
+}
+
